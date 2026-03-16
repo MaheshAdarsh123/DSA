@@ -7,3 +7,5 @@ if(string == reversed):
     print("Palindrome")
 else:
     print("Not Palindrome")
+
+# another way
