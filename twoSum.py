@@ -1,9 +1,18 @@
 def twoSum(numbers, target):
 
-    asx = 0
-    seen = set()
-    for num in numbers:
-        asx = target - num
-        if asx in seen:
-            return True
+    seen = {}
+    for i in range(len(numbers)):
+
+        
+        complement  = target - numbers[i]
+        if complement in seen:
+            return [seen[complement],i]
+
+        seen[numbers[i]] = i
+
+numbers = list(map(int, input('Enter number --> ').split()))
+target = int(input('Enter target --> '))
+
+print(twoSum(numbers, target))
+        
         
